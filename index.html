@@ -6,35 +6,45 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Modern Landing Page</title>
 	<link rel="stylesheet" href="./css/normalize.min.css">
+	<link rel="stylesheet" href="./css/styles.min.css">
+	<meta name="description" content="Modern Landing Page">
+	<meta name="keywords" content="html, css, landing page, modern">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Modern Landing Page">
 </head>
-<body>
-	<header>
-		<ul>
-			<li>Home</li>
-			<li>Blog</li>
-			<li>About Us</li>
-			<li>Team</li>
-			<li>Contact Us</li>
-		</ul>
+<body class="container">
+	<header class="header">
+		<h1 class="header-title">Home</h1>
+		<nav class="header-navbar">
+			<a class="header-navbar-item" href="#">Blog</a>
+			<a class="header-navbar-item" href="#">About us</a>
+			<a class="header-navbar-item" href="#">Team</a>
+			<a class="header-navbar-item" href="#">Contact us</a>
+		</nav>
 	</header>
-	<main>
-		<div>
-			<h2>Teamwork is key</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem rerum dolores provident, dignissimos alias maiores nesciunt repellendus quam natus soluta deserunt vel nemo, ea iure ipsum quidem perspiciatis nam? Temporibus?</p>
-			<a href="#">Learn More</a>
-			<a href="#">Get started</a>
-		</div>
-		<div>
-			<img src="./images/teamwork.svg" alt="Teamwork">
-		</div>
+	<main class="main">
+		<section class="main-info">
+			<h2 class="main-info--title">Teamwork is key</h2>
+			<p class="main-info--description">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<section>
+				<a class="main-info--btn" href="#">Learn More</a>
+				<a class="main-info--btn" href="#">Get started</a>	
+			</section>
+		</section>
+		<section class="main-image-container">
+			<img class="main-image" src="./images/teamwork.svg" alt="Teamwork">
+		</section>
 	</main>
-	<footer>
-		<div>
-			<img src="./images/linkedin.svg" alt="Linkedin Icon">
-			<img src="./images/facebook.svg" alt="Facebook Icon">
-			<img src="./images/twitter.svg" alt="Twitter Icon">
-			<img src="./images/pinterest.svg" alt="Pinterest Icon">
-		</div>
+	<footer class="footer">
+		<section>
+			<a href="#"><img class="footer-social" src="./images/linkedin.svg" alt="Linkedin Icon"></a>
+			<a href="#"><img class="footer-social" src="./images/facebook.svg" alt="Facebook Icon"></a>
+			<a href="#"><img class="footer-social" src="./images/twitter.svg" alt="Twitter Icon"></a>
+			<a href="#"><img class="footer-social" src="./images/pinterest.svg" alt="Pinterest Icon"></a>	
+		</section>
+		<section>
+			<a class="designedby" target="_blank" href="https://www.freepik.com">Diseñado por Freepik</a>
+		</section>
 	</footer>
 </body>
 </html>

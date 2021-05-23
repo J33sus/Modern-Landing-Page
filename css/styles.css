@@ -1,0 +1,131 @@
+/*----------  myFont  ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/*----------  Container  ----------*/
+.container {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-areas: "header header header"
+						"main main main"
+						"footer footer footer";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: .7fr 1.8fr .5fr;
+
+	background: url('/images/background.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+
+/*----------  Header - Navbar  ----------*/
+.header {
+	grid-area: header;
+	margin: 3rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-title {
+	color: #4e628f;
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.header-navbar {
+	height: max-content;
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;	
+}
+
+.header-navbar-item {
+	color: #64739b;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition: .2s ease all;
+}
+
+.header-navbar-item:hover {
+	text-shadow: 3px 1px 12px rgba(150, 150, 150, 1);
+}
+
+/*----------  Main content  ----------*/
+.main {
+	grid-area: main;
+	display: flex;
+}
+
+.main-info {
+	margin: 0 5rem;
+	margin-bottom: 5rem;
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.main-info--title {
+	color: #4e628f;
+	margin: 0;
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+.main-info--description {
+	width: 100%;
+	line-height: 1.5625rem;
+	color: #6b79a0;
+	font-size: 1.3rem;
+}
+
+.main-info--btn {
+	background: #b3eaff;
+	color: #4e628f;
+	padding: .5rem 1.2rem;
+	margin-right: 1.2rem;
+	border-radius: 30px;
+	font-weight: 800;
+	text-decoration: none;
+	transition: .5s ease all;
+}
+
+.main-info--btn:hover  {
+	color: #fff;
+	background: #4e628f;
+}
+
+.main-image-container {
+    width: 65%;	
+	display: flex;
+	justify-content: center;
+}
+
+.main-image {
+	width: 70%;	
+}
+
+/*----------  Footer  ----------*/
+.footer {
+	grid-area: footer;
+	margin: 0 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-social {
+	width: 2rem;
+	margin-right: 0.3rem;
+}
+
+.designedby {
+	color: #4e628f;
+	font-weight: 800;
+	text-decoration: none;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
