@@ -15,7 +15,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: .7fr 1.8fr .5fr;
 
-	background: url('/images/background.png');
+	background: url('../images/background.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
