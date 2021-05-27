@@ -15,6 +15,9 @@
 <body class="container">
 	<header class="header">
 		<h1 class="header-title">Home</h1>
+		<span class="header-mobile-icon">
+			<i class="fas fa-bars fa-2x"></i>
+		</span>
 		<nav class="header-navbar">
 			<a class="header-navbar-item" href="#">Blog</a>
 			<a class="header-navbar-item" href="#">About us</a>
@@ -43,8 +46,19 @@
 			<a href="#"><img class="footer-social" src="./images/pinterest.svg" alt="Pinterest Icon"></a>	
 		</section>
 		<section>
-			<a class="designedby" target="_blank" href="https://www.freepik.com">Diseñado por Freepik</a>
+			<a class="designedby" target="_blank" rel="noopener" href="https://www.freepik.com">Diseñado por Freepik</a>
 		</section>
 	</footer>
+	<script src="https://kit.fontawesome.com/8389db25e4.js" crossorigin="anonymous"></script>
+	<script>
+		window.addEventListener('load', function(event) {
+			let switchMenu = document.getElementsByClassName('header-mobile-icon');
+			if(switchMenu) {
+				switchMenu[0].addEventListener('click', () => {
+					document.getElementsByClassName('header-navbar')[0].classList.toggle('enabled');
+				});
+			}
+		});
+	</script>
 </body>
 </html>
