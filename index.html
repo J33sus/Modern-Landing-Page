@@ -5,59 +5,77 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Modern Landing Page</title>
-	<link rel="stylesheet" href="./css/normalize.min.css">
-	<link rel="stylesheet" href="./css/styles.min.css">
+
 	<meta name="description" content="Modern Landing Page">
 	<meta name="keywords" content="html, css, landing page, modern">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Modern Landing Page">
+
+	<link rel="stylesheet" href="./css/normalize.min.css">
+	<link rel="stylesheet" href="./css/styles.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-<body class="container">
-	<header class="header">
-		<h1 class="header-title">Home</h1>
-		<span class="header-mobile-icon">
-			<i class="fas fa-bars fa-2x"></i>
-		</span>
-		<nav class="header-navbar">
-			<a class="header-navbar-item" href="#">Blog</a>
-			<a class="header-navbar-item" href="#">About us</a>
-			<a class="header-navbar-item" href="#">Team</a>
-			<a class="header-navbar-item" href="#">Contact us</a>
-		</nav>
-	</header>
-	<main class="main">
-		<section class="main-info">
-			<h2 class="main-info--title">Teamwork is key</h2>
-			<p class="main-info--description">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<section>
-				<a class="main-info--btn" href="#">Learn More</a>
-				<a class="main-info--btn" href="#">Get started</a>	
+<body>
+	<div class="spinner-container">
+		<div class='spinner'></div>
+	</div>
+
+	<main class="container">
+		<header class="header">
+			<h1 class="header-title">Home</h1>
+			<span class="header-mobile-icon">
+				<i class="fas fa-bars fa-2x"></i>
+			</span>
+			<nav class="header-navbar">
+				<a class="header-navbar-item" href="#">Blog</a>
+				<a class="header-navbar-item" href="#">About us</a>
+				<a class="header-navbar-item" href="#">Team</a>
+				<a class="header-navbar-item" href="#">Contact us</a>
+			</nav>
+		</header>
+		<section class="main">
+			<section class="main-info">
+				<h2 class="main-info--title">Teamwork is key</h2>
+				<p class="main-info--description">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<section>
+					<a class="main-info--btn" href="#">Learn More</a>
+					<a class="main-info--btn" href="#">Get started</a>	
+				</section>
+			</section>
+			<section class="main-image-container">
+				<img class="main-image" src="./images/teamwork.svg" alt="Teamwork">
 			</section>
 		</section>
-		<section class="main-image-container">
-			<img class="main-image" src="./images/teamwork.svg" alt="Teamwork">
-		</section>
+		<footer class="footer">
+			<section>
+				<a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+				<a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
+				<a href="#" class="footer-social-icon"><i class="fab fa-pinterest-p"></i></a>	
+			</section>
+			<section>
+				<a class="designedby" target="_blank" rel="noopener" href="https://www.freepik.com">Diseño de Freepik</a>
+			</section>
+		</footer>
 	</main>
-	<footer class="footer">
-		<section>
-			<a href="#" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
-			<a href="#" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
-			<a href="#" class="footer-social-icon"><i class="fab fa-twitter"></i></a>
-			<a href="#" class="footer-social-icon"><i class="fab fa-pinterest-p"></i></a>	
-		</section>
-		<section>
-			<a class="designedby" target="_blank" rel="noopener" href="https://www.freepik.com">Diseñado por Freepik</a>
-		</section>
-	</footer>
-	<script src="https://kit.fontawesome.com/8389db25e4.js" crossorigin="anonymous"></script>
+
 	<script>
+		let spin_container = document.querySelector('.spinner-container');
+		let spinner = document.querySelector(".spinner");
+		let container = document.querySelector('.container');
+
 		window.addEventListener('load', function(event) {
-			let switchMenu = document.getElementsByClassName('header-mobile-icon');
-			if(switchMenu) {
-				switchMenu[0].addEventListener('click', () => {
-					document.getElementsByClassName('header-navbar')[0].classList.toggle('enabled');
-				});
-			}
+			container.style.visibility = "visible";
+
+			spin_container.style.animation = "spin-end 3s";
+			setTimeout(function() {
+				spin_container.style.display = "none";
+			}, 3000);
+
+			let switchMenu = document.querySelector('.header-mobile-icon');
+			switchMenu.addEventListener('click', () => {
+				document.querySelector('.header-navbar').classList.toggle('enabled');
+			});
 		});
 	</script>
 </body>
