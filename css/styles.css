@@ -3,7 +3,7 @@
 
 /*----------  Container  ----------*/
 body {
-	overflow:hidden;
+	overflow: hidden;
 }
 
 .container {
@@ -191,7 +191,7 @@ body {
 @media screen and (max-width: 769px) {
 	.container {
 		font-size: 12px;
-		background-size: 180vw 100vh;
+		background-size: 100vh 100vw;
 	}
 
 	/*----------  Header  ----------*/
@@ -203,22 +203,22 @@ body {
 	}
 
 	.header-navbar {
-		display: flex;
+		position: absolute;	
 		width: 100vw;
 		height: 100vh;
 		top: 0;
-		left: 100vw;
-		position: absolute;
+		left: -100%;
 		flex-direction: column;
 		background: #4e628f;
 		justify-content: center;
 		align-items: center;
 
-		transition: all 1s;		
+		transition: all 1s;
 	}
 
 	.header-navbar.enabled {
-		left: 0vw;
+		display: flex;
+		transform: translate(100%);
 	}
 
 	.header-navbar-item {
